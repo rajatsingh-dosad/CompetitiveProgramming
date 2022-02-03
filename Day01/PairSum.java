@@ -24,23 +24,23 @@ public class PairSum {
     public static void sumpair(int[] arr,int sum) {
 
         Arrays.sort(arr);
+
         int i = 0;
         int j = arr.length-1;
 
-
         while(i<j) {
-            if(arr[i]+arr[j] > sum)
+
+            if(arr[i] + arr[j] > sum)
                 j--;
-            else if(arr[i]+arr[j] < sum)
+            else if(arr[i] + arr[j] < sum)
                 i++;
             else {
                 System.out.println(arr[i]+" : "+arr[j]);
                 i++;
-                j--;    //Compulsory should increment i and decrement j so that it doesn't go to the loop for more time 
+                j--;
             }
-        }         
+        }
     }
-
 
     public static void main(String[] args) {
         
